@@ -50,7 +50,7 @@ public class UserService {
         if(u == null){
             // 用户名不存在，注册
             mapper.add(user);
-            sqlSession.commit();
+            sqlSession.commit();  // 提交事务
         }
         sqlSession.close();
 

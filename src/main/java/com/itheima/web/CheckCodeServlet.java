@@ -16,6 +16,7 @@ public class CheckCodeServlet extends HttpServlet {
 
         // 生成验证码
         ServletOutputStream os = response.getOutputStream();
+        // os指定了图片的输出流
         String checkCode = CheckCodeUtil.outputVerifyImage(100, 50, os, 4);
 
 

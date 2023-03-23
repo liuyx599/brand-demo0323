@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
         if(user != null){
             //登录成功，跳转到查询所有的BrandServlet
 
-            //判断用户是否勾选记住我
+            //判断用户是否勾选记住我,最好是把字符串常量写前面
             if("1".equals(remember)){
                 //勾选了，发送Cookie
 

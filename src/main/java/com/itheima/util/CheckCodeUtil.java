@@ -13,11 +13,14 @@ import java.util.Random;
  */
 public class CheckCodeUtil {
 
+    // 从VERIFY_CODES中随机取四个生成验证码字符
     public static final String VERIFY_CODES = "123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static Random random = new Random();
 
 
     public static void main(String[] args) throws IOException {
+        // 测试代码，将生成的验证码输出到 d://a.jpg 中
+        // 将本地输出流换成response的字节输出流就可以将验证码输出到网页中了
         OutputStream fos = new FileOutputStream("d://a.jpg");
         String checkCode = CheckCodeUtil.outputVerifyImage(100, 50, fos, 4);
 
@@ -120,7 +123,7 @@ public class CheckCodeUtil {
     }
 
     /**
-     * 输出指定验证码图片流
+     * 输出指定验证码图片流，根据四位验证码code生成对应的验证码图片
      *
      * @param w
      * @param h
