@@ -1,4 +1,5 @@
 com\itheima\web\UpdateServlet.class
+com\itheima\web\SelectUserServlet.class
 com\itheima\web\CheckCodeServlet.class
 com\itheima\web\filter\LoginFilter.class
 com\itheima\pojo\User.class
@@ -6,10 +7,13 @@ com\itheima\service\UserService.class
 com\itheima\util\SqlSessionFactoryUtils.class
 com\itheima\mapper\BrandMapper.class
 com\itheima\web\AddServlet.class
+com\itheima\web\AjaxServlet.class
 com\itheima\web\RegisterServlet.class
 com\itheima\web\SelectAllServlet.class
 com\itheima\service\BrandService.class
 com\itheima\web\LoginServlet.class
+com\itheima\web\AxiosServlet.class
 com\itheima\mapper\UserMapper.class
+com\itheima\web\listener\ContextLoaderListener.class
 com\itheima\web\SelectByIdServlet.class
 com\itheima\pojo\Brand.class

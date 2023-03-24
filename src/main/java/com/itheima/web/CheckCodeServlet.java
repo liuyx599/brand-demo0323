@@ -2,13 +2,17 @@ package com.itheima.web;
 
 import com.itheima.util.CheckCodeUtil;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
-import java.io.FileOutputStream;
+import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.OutputStream;
 
+// url:http://localhost:8080/brand-demo/checkCodeServlet
+// @WebServlet后面的这个资源名称才是真正的服务器资源，而不是类名CheckCodeServlet 一定要注意区分大小写
 @WebServlet("/checkCodeServlet")
 public class CheckCodeServlet extends HttpServlet {
     @Override
@@ -22,7 +26,7 @@ public class CheckCodeServlet extends HttpServlet {
 
         // 存入Session
         HttpSession session = request.getSession();
-        session.setAttribute("checkCodeGen",checkCode);
+        session.setAttribute("checkCodeGen", checkCode);
 
 
     }

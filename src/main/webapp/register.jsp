@@ -22,7 +22,7 @@
                 <td class="inputs">
                     <input name="username" type="text" id="username">
                     <br>
-                    <span id="username_err" class="err_msg" >${register_msg}</span>
+                    <span id="username_err" class="err_msg">${register_msg}</span>
                 </td>
 
             </tr>
@@ -41,9 +41,10 @@
                 <td>验证码</td>
                 <td class="inputs">
                     <input name="checkCode" type="text" id="checkCode">
-                    <%-- 图片的src输出流来自于/brand-demo/checkCodeServelet中的response  --%>
+                    <%-- 图片的src输出流来自于/brand-demo/CheckCodeServelet中的response  --%>
+                    <%-- 大小写不要弄错了--%>
                     <img id="checkCodeImg" src="/brand-demo/checkCodeServlet">
-                    <a href="#" id="changeImg" >看不清？</a>
+                    <a href="#" id="changeImg">看不清？</a>
                 </td>
             </tr>
 
@@ -65,7 +66,7 @@
         // 可以复制以下url体验以下
         // http://localhost:8080/brand-demo/checkCodeServlet   如果浏览器不关闭缓存，那可能每次可能都是得到相同的图片
         // http://localhost:8080/brand-demo/checkCodeServlet?2131231231   问号后面的数字可以随意更换，每更换一次就刷新一次图片
-        document.getElementById("checkCodeImg").src = "/brand-demo/checkCodeServlet?"+new Date().getMilliseconds();
+        document.getElementById("checkCodeImg").src = "/brand-demo/checkCodeServlet?" + new Date().getMilliseconds();
     }
 
 </script>
