@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>添加品牌</title>
+</head>
+<body>
+<h3>添加品牌</h3>
+<form action="" method="post">
+    品牌名称：<input id="brandName" name="brandName"><br>
+    企业名称：<input id="companyName" name="companyName"><br>
+    排序：<input id="ordered" name="ordered"><br>
+    描述信息：<textarea cols="20" id="description" name="description" rows="5"></textarea><br>
+    状态：
+    <input name="status" type="radio" value="0">禁用
+    <input name="status" type="radio" value="1">启用<br>
+
+    <input id="btn" type="button" value="提交">
+</form>
+
+<script src="js/axios-0.18.0.js"></script>
+
+<script>
+    //1. 给按钮绑定单击事件
+    document.getElementById("btn").onclick = function () {
+        // 将表单数据转为json
+        var formData = {
+            brandName: "",
+            companyName: "",
+            ordered: "",
+            description: "",
+            status: "",
+        };
+        // 获取表单数据
+        // 设置数据
+        formData.brandName = document.getElementById("brandName").value;
+
+        // 获取表单数据
+        // 设置数据
+        formData.companyName = document.getElementById("companyName").value;
+
+        // 获取表单数据
+        // 设置数据
+        formData.ordered = document.getElementById("ordered").value;
+
+        // 获取表单数据
+        // 设置数据
+        formData.description = document.getElementById("description").value;
+
+        let status = document.getElementsByName("status");
+        for (let i = 0; i < status.length; i++) {
+            if (status[i].checked) {
+                //
+                formData.status = status[i].value;
+            }
+        }
+
+        console.log(formData);
+        //2. 发送ajax请求
+        axios({
+            method: "post",
+            url: "http://localhost:8080/brand-demo/jsonAddServlet",
+            data: formData
+        }).then(function (resp) {
+            // 判断响应数据是否为 success
+            if (resp.data === "success") {
+                location.href = "http://localhost:8080/brand-demo/brandjson.html";
+            }
+        })
+    }
+
+
+</script>
+</body>
+</html>
