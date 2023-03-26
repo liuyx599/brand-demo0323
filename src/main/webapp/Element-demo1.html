@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--链接方式引入CSS，在 HTML 头部的 <head> 标签引入外部的 CSS 文件-->
+    <link href="/element-ui/lib/theme-chalk/index.css" rel="stylesheet">
+    <style>
+        @import url("//unpkg.com/element-ui@2.15.13/lib/theme-chalk/index.css");
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <el-row>
+        <el-button disabled>默认按钮</el-button>
+        <el-button disabled type="primary">主要按钮</el-button>
+        <el-button disabled type="success">成功按钮</el-button>
+        <el-button disabled type="info">信息按钮</el-button>
+        <el-button disabled type="warning">警告按钮</el-button>
+        <el-button disabled type="danger">危险按钮</el-button>
+    </el-row>
+</div>
+
+
+<script>
+    new Vue({
+        el: "#app",
+    }).$mount("#app")
+</script>
+<script src="/js/vue.js"></script>
+<script src="/element-ui/lib/index.js"></script>
+
+
+</body>
+</html>
