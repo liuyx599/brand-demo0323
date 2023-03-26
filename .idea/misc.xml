@@ -4,12 +4,13 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$" />
     <file type="web" url="file://$PROJECT_DIR$/../filter-demo" />
+    <file type="web" url="file://$PROJECT_DIR$/../vue-demo" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/../filter-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/../vue-demo/pom.xml" />
       </list>
     </option>
   </component>
